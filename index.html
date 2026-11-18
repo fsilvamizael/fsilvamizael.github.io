@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Miza Silva Engenharia Civil | Projetos, laudos e acompanhamento de obra</title>
+<meta name="description" content="Engenharia civil para quem vai construir, reformar ou regularizar: projeto estrutural, laudos, aprovação na prefeitura e acompanhamento de obra. Fale pelo WhatsApp.">
+<meta name="theme-color" content="#ECEDE8">
+<meta property="og:title" content="Miza Silva Engenharia Civil">
+<meta property="og:description" content="Projetos, laudos e acompanhamento de obra. Fale pelo WhatsApp.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231B2630'/%3E%3Cpath d='M8 24V9l8 9 8-9v15' fill='none' stroke='%23E0245E' stroke-width='3.5' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Source+Serif+4:opsz,wght@8..60,400..700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#ECEDE8; --paper-2:#DFE1DA; --ink:#1B2630; --muted:#4A5762; --mark:#E0245E; --mark-dark:#C41B50;
+  --line:rgba(27,38,48,.22);
+  --display:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --text:"Source Serif 4",Georgia,"Times New Roman",serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:1rem}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--text);font-size:1.125rem;line-height:1.65}
+a{color:inherit}
+.wrap{width:min(1180px,100% - 3rem);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.05}
+:focus-visible{outline:3px solid var(--mark);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:var(--paper);padding:.6rem 1rem;z-index:10}
+.skip:focus{left:0}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;gap:.65rem;padding:.9rem 1.4rem;border:2px solid transparent;border-radius:4px;font-family:var(--display);font-weight:600;font-size:1rem;line-height:1.2;text-decoration:none;cursor:pointer;transition:background-color .15s,color .15s,border-color .15s}
+.btn svg{width:1.25rem;height:1.25rem;flex:none}
+.btn--mark{background:var(--mark);color:#fff}
+.btn--mark:hover{background:var(--mark-dark)}
+.btn--line{border-color:currentColor;background:transparent}
+.btn--line:hover{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.btn--small{padding:.6rem 1rem;font-size:.95rem}
+
+/* cabeçalho */
+.top{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-block:1.25rem}
+.brand{font-family:var(--display);font-weight:800;font-stretch:112%;font-size:1.2rem;line-height:1.1;text-decoration:none}
+.brand span{display:block;font-weight:400;font-stretch:100%;font-size:.9rem;color:var(--muted)}
+
+/* hero */
+.hero{background-image:linear-gradient(rgba(27,38,48,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(27,38,48,.06) 1px,transparent 1px);background-size:48px 48px;border-bottom:2px solid var(--ink)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:3rem;align-items:center;padding-block:clamp(2rem,6vw,4.5rem)}
+h1{font-size:clamp(2.6rem,6.4vw,5rem);font-weight:800;font-stretch:115%;letter-spacing:-.025em;max-width:11ch}
+.lead{max-width:33rem;margin:1.5rem 0 2rem;font-size:1.25rem;color:var(--muted)}
+.cta-row{display:flex;flex-wrap:wrap;gap:.75rem}
+.plan{margin:0}
+.plan svg{display:block;width:100%;height:auto;color:var(--ink)}
+.plan figcaption{margin-top:.5rem;font-size:.9rem;color:var(--muted)}
+.plan .dim{stroke:var(--mark)}
+.plan text{fill:var(--ink);font-family:var(--display);font-size:13px;font-weight:500}
+.d{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.1s cubic-bezier(.6,.1,.2,1) forwards;animation-delay:var(--d,0s)}
+.fade{opacity:0;animation:fade .6s ease forwards;animation-delay:var(--d,0s)}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes fade{to{opacity:1}}
+
+/* seções */
+.section{padding-block:clamp(3.5rem,8vw,6rem)}
+.section--alt{background:var(--paper-2)}
+h2{font-size:clamp(1.9rem,4vw,2.9rem);font-weight:800;font-stretch:108%;letter-spacing:-.015em;max-width:20ch}
+
+.services{list-style:none;margin:2.5rem 0 0;padding:0;border-top:2px solid var(--ink)}
+.services li{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:2rem;padding-block:1.5rem;border-bottom:1px solid var(--line)}
+.services h3{font-size:1.3rem;font-weight:700;font-stretch:105%}
+.services p{margin:0;max-width:60ch;color:var(--muted)}
+
+.steps{list-style:none;margin:3rem 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2rem}
+.steps li{position:relative;border-top:2px solid var(--ink);padding-top:1.5rem}
+.steps li::before{content:"";position:absolute;top:-8px;left:0;width:14px;height:14px;background:var(--mark)}
+.step-n{display:block;font-family:var(--display);font-size:2.4rem;font-weight:800;font-stretch:115%;line-height:1}
+.steps h3{margin:.75rem 0 .5rem;font-size:1.2rem;font-weight:700}
+.steps p{margin:0;color:var(--muted);font-size:1.05rem}
+
+/* contato */
+.contact{background:var(--ink);color:var(--paper)}
+.contact h2{max-width:18ch}
+.contact .lead{color:#C9D0D5;margin-bottom:2rem}
+.contact .btn--line:hover{background:var(--paper);border-color:var(--paper);color:var(--ink)}
+.contact-note{margin:1.25rem 0 0;color:#C9D0D5;font-size:1rem}
+
+/* rodapé em formato de carimbo de prancha */
+.stamp{display:grid;grid-template-columns:1.4fr 1fr 1fr auto;margin-block:2.5rem;border:2px solid var(--ink);font-size:1rem}
+.stamp>*{padding:1rem 1.25rem;border-left:1px solid var(--ink)}
+.stamp>:first-child{border-left:0}
+.stamp strong{font-family:var(--display);font-weight:800;font-stretch:112%}
+.stamp a{text-decoration-thickness:1px;text-underline-offset:3px}
+
+@media (max-width:980px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.stamp{grid-template-columns:1fr 1fr}.stamp>:nth-child(3){border-left:0}.stamp>:nth-child(n+3){border-top:1px solid var(--ink)}}
+@media (max-width:860px){.hero-grid{grid-template-columns:1fr;gap:2rem}.services li{grid-template-columns:1fr;gap:.5rem}}
+@media (max-width:560px){.wrap{width:min(1180px,100% - 2rem)}.steps{grid-template-columns:1fr}.stamp{grid-template-columns:1fr}.stamp>*{border-left:0;border-top:1px solid var(--ink)}.stamp>:first-child{border-top:0}.top .btn{display:none}.btn{width:100%;justify-content:center}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.d{animation:none;stroke-dashoffset:0}.fade{animation:none;opacity:1}}
+</style>
+</head>
+<body>
+<a class="skip" href="#servicos">Ir para o conteúdo</a>
+
+<div class="hero"> 
+  <div class="wrap">
+    <header class="top">
+      <a class="brand" href="#">Miza Silva<span>Engenharia civil</span></a>
+      <a class="btn btn--mark btn--small" href="https://wa.me/5514996295105" target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
+    </header>
+
+    <div class="hero-grid">
+      <div>
+        <h1>Obra segura começa no projeto.</h1>
+        <p class="lead">Engenharia civil para quem vai construir, reformar ou regularizar um imóvel: projeto estrutural, laudos, aprovação na prefeitura e acompanhamento de obra.</p>
+        <div class="cta-row">
+          <a class="btn btn--mark" href="https://wa.me/5514996295105?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.6-4.8A8.5 8.5 0 1 1 8 19.5L3 21z"/></svg>
+            Chamar no WhatsApp
+          </a>
+          <a class="btn btn--line" href="https://www.instagram.com/mizafsilva/" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            Ver o Instagram
+          </a>
+        </div>
+      </div>
+
+      <figure class="plan">
+        <svg viewBox="0 0 600 520" role="img" aria-label="Desenho técnico de uma estrutura de dois pavimentos, com fundação, pilares, lajes, armadura e cotas">
+          <g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
+            <path class="d" pathLength="1" style="--d:0s" d="M50 420H510"/>
+            <g class="d-group">
+              <rect class="d" pathLength="1" style="--d:.25s" x="115" y="420" width="70" height="22"/>
+              <rect class="d" pathLength="1" style="--d:.3s" x="265" y="420" width="70" height="22"/>
+              <rect class="d" pathLength="1" style="--d:.35s" x="415" y="420" width="70" height="22"/>
+              <rect class="d" pathLength="1" style="--d:.55s" x="139" y="316" width="22" height="104"/>
+              <rect class="d" pathLength="1" style="--d:.6s" x="289" y="316" width="22" height="104"/>
+              <rect class="d" pathLength="1" style="--d:.65s" x="439" y="316" width="22" height="104"/>
+              <rect class="d" pathLength="1" style="--d:.9s" x="100" y="300" width="400" height="16"/>
+              <rect class="d" pathLength="1" style="--d:1.05s" x="139" y="196" width="22" height="104"/>
+              <rect class="d" pathLength="1" style="--d:1.1s" x="289" y="196" width="22" height="104"/>
+              <rect class="d" pathLength="1" style="--d:1.15s" x="439" y="196" width="22" height="104"/>
+              <rect class="d" pathLength="1" style="--d:1.4s" x="100" y="180" width="400" height="16"/>
+            </g>
+            <path class="fade" style="--d:1.7s" stroke-width="1" stroke-dasharray="4 4" d="M145 190V436M155 190V436M295 190V436M305 190V436M445 190V436M455 190V436"/>
+            <path class="d" pathLength="1" style="--d:1.5s" stroke-width="1" d="M50 300H100M50 180H100"/>
+          </g>
+          <g class="dim" fill="none" stroke-width="1.5">
+            <path class="d" pathLength="1" style="--d:2s" d="M545 180V420M500 180H556M500 300H556M510 420H556M539 186L551 174M539 306L551 294M539 426L551 414"/>
+            <path class="d" pathLength="1" style="--d:2.2s" d="M150 485H450M150 446V492M300 446V492M450 446V492M144 491L156 479M294 491L306 479M444 491L456 479"/>
+          </g>
+          <g class="fade" style="--d:2.5s">
+            <text x="52" y="412">±0,00</text>
+            <text x="52" y="292">+3,00</text>
+            <text x="52" y="172">+6,00</text>
+            <text x="532" y="240" text-anchor="middle" transform="rotate(-90 532 240)">3,00</text>
+            <text x="532" y="360" text-anchor="middle" transform="rotate(-90 532 360)">3,00</text>
+            <text x="225" y="476" text-anchor="middle">4,50</text>
+            <text x="375" y="476" text-anchor="middle">4,50</text>
+          </g>
+        </svg>
+        <figcaption>Pórtico de dois pavimentos: fundação, pilares, lajes e armadura.</figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+
+<main>
+  <section class="section" id="servicos">
+    <div class="wrap">
+      <h2>O que a gente faz</h2>
+      <ul class="services">
+        <li><h3>Projeto estrutural</h3><p>Dimensionamento de fundações, pilares, vigas e lajes, com detalhamento claro para quem vai executar a obra.</p></li>
+        <li><h3>Regularização e aprovação</h3><p>Levantamento, documentação e acompanhamento do processo na prefeitura, do projeto até a regularização do imóvel.</p></li>
+        <li><h3>Laudos e vistorias</h3><p>Inspeção técnica de trincas, infiltrações e outras patologias, com laudo e ART.</p></li>
+        <li><h3>Acompanhamento de obra</h3><p>Visitas técnicas para conferir se o que está sendo construído segue o projeto e as normas.</p></li>
+        <li><h3>Reformas e ampliações</h3><p>Avaliação da estrutura existente antes de abrir um vão, derrubar uma parede ou construir mais um pavimento.</p></li>
+        <li><h3>Orçamento e planejamento</h3><p>Quantitativos, cronograma e orçamento para você saber quanto vai custar e quanto tempo leva antes de começar.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="como-funciona">
+    <div class="wrap">
+      <h2>Como funciona</h2>
+      <ol class="steps">
+        <li><span class="step-n">1</span><h3>Conversa</h3><p>Você conta pelo WhatsApp o que quer construir, reformar ou resolver.</p></li>
+        <li><span class="step-n">2</span><h3>Visita e levantamento</h3><p>Vamos ao local, medimos e avaliamos o que já existe.</p></li>
+        <li><span class="step-n">3</span><h3>Proposta</h3><p>Você recebe escopo, prazo e valor por escrito, sem surpresas depois.</p></li>
+        <li><span class="step-n">4</span><h3>Execução</h3><p>Entregamos o projeto ou acompanhamos a obra até a conclusão.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section contact" id="contato">
+    <div class="wrap">
+      <h2>Conte o que você precisa construir, reformar ou regularizar.</h2>
+      <p class="lead">Respondemos pelo WhatsApp. Se preferir, acompanhe o trabalho no Instagram.</p>
+      <div class="cta-row">
+        <a class="btn btn--mark" href="https://wa.me/5514996295105?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M3 21l1.6-4.8A8.5 8.5 0 1 1 8 19.5L3 21z"/></svg>
+          Chamar no WhatsApp
+        </a>
+        <a class="btn btn--line" href="https://www.instagram.com/mizafsilva/" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          @mizafsilva
+        </a>
+      </div>
+      <p class="contact-note">WhatsApp: (14) 99629-5105</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="stamp">
+      <div><strong>Miza Silva</strong><br>Engenharia civil</div>
+      <div><a href="https://wa.me/5514996295105" target="_blank" rel="noopener noreferrer">(14) 99629-5105</a></div>
+      <div><a href="https://www.instagram.com/mizafsilva/" target="_blank" rel="noopener noreferrer">@mizafsilva</a></div>
+      <div>© <span id="ano">2026</span></div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var ano = document.getElementById("ano");
+  if (ano) ano.textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
